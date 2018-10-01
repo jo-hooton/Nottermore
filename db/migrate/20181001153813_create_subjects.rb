@@ -3,7 +3,7 @@ class CreateSubjects < ActiveRecord::Migration[5.2]
     create_table :subjects do |t|
       t.string :name
       t.text :description
-      t.integer :professor_id
+      t.references :professor, foreign_key: true
 
       t.timestamps
     end

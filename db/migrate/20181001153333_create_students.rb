@@ -4,9 +4,9 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.integer :house_id
-      t.integer :wand_id
-      t.integer :patronu_id
+      t.references :house, foreign_key: true
+      t.references :wand, foreign_key: true
+      t.references :patronu, foreign_key: true
 
       t.timestamps
     end

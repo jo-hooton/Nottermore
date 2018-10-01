@@ -3,9 +3,9 @@
 one:
   name: MyString
   bio: MyText
-  house_id: 1
+  house: one
 
 two:
   name: MyString
   bio: MyText
-  house_id: 1
+  house: two

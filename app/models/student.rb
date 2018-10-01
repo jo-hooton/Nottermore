@@ -1,6 +1,9 @@
 class Student < ApplicationRecord
-  has_many :lessons
-  belongs_to :wand
   belongs_to :house
+  belongs_to :wand
   belongs_to :patronu
+
+  has_many :lessons
+  has_many :professors, through: :lessons
+
 end

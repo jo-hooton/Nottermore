@@ -1,0 +1,9 @@
+<h1><%= @subject.name %></h1>
+
+<h2>Taught by <%= link_to @subject.professor_name, professor_path(@subject.professor) %></h2>
+
+<p>
+  <%= @subject.description %>
+</p>
+
+<h2><%= link_to 'All subjects', subjects_path %></h2>
