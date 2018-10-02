@@ -1,0 +1,7 @@
+<h1>The 4 Houses of Hogwarts School of Witchcraft and Wizardry</h1>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li> <%= link_to house.name, house_path(house) %> </li> <br>
+  <% end %>
+</ul>

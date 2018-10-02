@@ -3,7 +3,7 @@ class CreateProfessors < ActiveRecord::Migration[5.2]
     create_table :professors do |t|
       t.string :name
       t.text :bio
-      t.integer :house_id
+      t.references :house, foreign_key: true
 
       t.timestamps
     end

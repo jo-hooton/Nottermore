@@ -1,0 +1,7 @@
+<h1>Professors of Hogwarts School of Witchcraft and Wizardry</h1>
+
+<ul>
+  <% @professors.each do |professor| %>
+    <li> <%= link_to professor.name, professor_path(professor) %> </li> <br>
+  <% end %>
+</ul>
