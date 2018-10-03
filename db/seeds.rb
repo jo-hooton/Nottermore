@@ -62,7 +62,27 @@ Subject.create(name: "Arithmancy", professor_id: 9, description: "Arithmancy is 
 Subject.create(name: "Care of Magical Creatures", professor_id: 10, description: "Care of Magical Creatures is the class which instructs students on how to care for magical beasts. Classes are held outside the castle. In Harry's first two years, the class is taken by Professor Silvanus Kettleburn who then retires 'in order to enjoy more time with his remaining limbs'. Dumbledore then recruits the gamekeeper Rubeus Hagrid to accept a teaching position along with his gamekeeping duties. Although Hagrid is obviously very experienced and knowledgeable, he consistently misjudges the risk that the animals he uses in his lessons pose to his students, which sometimes results in chaos. When Hagrid is absent, his lessons are taken over by Professor Grubbly-Plank, a witch and acquaintance of Dumbledore's.")
 Subject.create(name: "Divination", professor_id: 11, description: "Divination is the art of predicting the future. Various methods are described, including tea leaves, Fire-omens, Crystal balls, Palmistry, Cartomancy (including the reading of conventional playing cards and the tarot), astrology, and Dream interpretations. Divination is described by Professor McGonagall as 'one of the most imprecise branches of magic'. Supporters of the subject claim that it is an inexact science that requires innate gifts like the 'Inner Eye'. Those opposed claim that the subject is irrelevant and fraudulent. Harry is first taught Divination by Professor Trelawney, and then later by Firenze after Trelawney is sacked by Dolores Umbridge in Harry's fifth year. In the sixth (and presumably seventh) year, Firenze and Professor Trelawney teach Divination.")
 
-Subject.create(name: "Muggle Studies", professor_id: 12, description: "Muggle Studies is a class taught by Charity Burbage which involves the study of the Muggle (non-magical) culture 'from a wizarding point of view.' It also includes Muggle Art and Muggle Music. The only need for witches and wizards to learn about Muggle ways and means is to ensure they can blend in with Muggles while needing to do so (for example, at the 1994 Quidditch World Cup). As the class is only mentioned as being taken by Hermione, and for just one year, little is known about its curriculum.")
+Subject.create(name: "Muggle Studies", professor_id: 12, cd pottedescription: "Muggle Studies is a class taught by Charity Burbage which involves the study of the Muggle (non-magical) culture 'from a wizarding point of view.' It also includes Muggle Art and Muggle Music. The only need for witches and wizards to learn about Muggle ways and means is to ensure they can blend in with Muggles while needing to do so (for example, at the 1994 Quidditch World Cup). As the class is only mentioned as being taken by Hermione, and for just one year, little is known about its curriculum.")
 
 Subject.create(name: "Ancient Runes", professor_id: 13, description: "The Study of Ancient Runes is a general theoretical subject that studies ancient runic scripts. It is taught by Professor Bathsheda Babbling. It is an elective course, that can be taken by students third year and above.")
 Subject.create(name: "Apparition", professor_id: 14, description: "Apparition is the magical form of teleportation in the wizarding world. Lessons are optional to those in the sixth and seventh years. In the wizarding world, performing Apparition requires a licence and may only be legally performed by people over seventeen years of age. The described reason for the restriction is that Apparition is dangerous if done improperly: insufficient concentration may lead to body parts being left behind in an unfortunate side-effect known as splinching. Although, as Hermione points out innumerable times throughout the series, magical enchantments on Hogwarts Castle and grounds prevent Apparition and Disapparition inside the castle, these protections are temporarily relaxed within the Great Hall for short periods to permit students to practise Apparition. Wilkie Twycross, a Ministry of Magic Apparition Instructor, offers lessons in Apparition to sixth-years.")
+
+
+
+Patronu.create(name: "Stag")
+Patronu.create(name: "Jack Russell Terrier")
+Patronu.create(name: "Otter")
+Patronu.create(name: "House")
+Patronu.create(name: "Hungarian Horntail")
+Patronu.create(name: "Rabbit")
+Patronu.create(name: "Hare")
+Patronu.create(name: "Phoenix")
+Patronu.create(name: "Blue Eyes White Dragon")
+Patronu.create(name: "Chinese Fireball")
+Patronu.create(name: "Leech")
+Patronu.create(name: "Termite")
+Patronu.create(name: "King Cobra")
+Patronu.create(name: "R2D2")
+Patronu.create(name: "Golem")
+Patronu.create(name: "Marju")
+Patronu.create(name: "Blobfish")
