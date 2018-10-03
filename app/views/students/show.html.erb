@@ -15,3 +15,7 @@
 <% else  %>
 <h2> <%= link_to 'Discover Patronus', getpatronu_path %></h2>
 <% end %>
+
+<% if flash[:authorized]  %>
+  <%= flash[:authorized]   %>
+<% end %>

@@ -24,7 +24,6 @@ class ApplicationController < ActionController::Base
     if current_user.id != student_id.to_i
       flash[:authorized] = "You can't view a page that doesn't belong to you!"
       redirect_to current_user
-
     end
   end
 
