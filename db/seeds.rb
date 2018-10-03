@@ -67,11 +67,6 @@ Subject.create(name: "Muggle Studies", professor_id: 12, cd pottedescription: "M
 Subject.create(name: "Ancient Runes", professor_id: 13, description: "The Study of Ancient Runes is a general theoretical subject that studies ancient runic scripts. It is taught by Professor Bathsheda Babbling. It is an elective course, that can be taken by students third year and above.")
 Subject.create(name: "Apparition", professor_id: 14, description: "Apparition is the magical form of teleportation in the wizarding world. Lessons are optional to those in the sixth and seventh years. In the wizarding world, performing Apparition requires a licence and may only be legally performed by people over seventeen years of age. The described reason for the restriction is that Apparition is dangerous if done improperly: insufficient concentration may lead to body parts being left behind in an unfortunate side-effect known as splinching. Although, as Hermione points out innumerable times throughout the series, magical enchantments on Hogwarts Castle and grounds prevent Apparition and Disapparition inside the castle, these protections are temporarily relaxed within the Great Hall for short periods to permit students to practise Apparition. Wilkie Twycross, a Ministry of Magic Apparition Instructor, offers lessons in Apparition to sixth-years.")
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2cc153d7693e320aeda3e7913ab9d896cfeda15a
 Patronu.create(name: "Stag")
 Patronu.create(name: "Jack Russell Terrier")
 Patronu.create(name: "Otter")

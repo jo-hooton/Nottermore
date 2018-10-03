@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pottermore1</title>
+    <title>Nottermore</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Zilla+Slab:400,400i,600" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class='header'>
+      <div>
+        <h1>Nottermore</h1>
+        <h2> Like Pottermore, but not. </h2>
+      </div>
+    </div>
+
+    <div>
+        <% if logged_in? %>
+          <p> You are logged in as <%= link_to current_user.first_name, current_user %> </p>
+          <p> <%= link_to "Log out", logout_path, method: "post" %> </p>
+
+        <% else %>
+          <p> You are not logged in. </p>
+          <p> <%= link_to "Log in?", login_path %> </p>
+          <p> or </p>
+          <p> <%= link_to "Sign up?", signup_path %> </p>
+        <% end %>
+      </div>
+
+    <div class='main-content'>
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <h3> Bobby and Jo &copy;</h3>
+    </div>
   </body>
 </html>

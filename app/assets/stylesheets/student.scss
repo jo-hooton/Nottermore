@@ -1,42 +1,71 @@
-body {
-  font-family: 'EB Garamond', serif;
-}
-
-h1 {
-  font-family: 'Dancing Script', cursive;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'EB Garamond', serif;
-  font-weight: 700;
-}
-
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
-  background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  background-color: #212529;
-  height: 100%;
-  width: 100%;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: sticky;
   top: 0;
-  left: 0;
-  opacity: 0.3;
 }
 
-header.masthead h1 {
-  font-size: 2rem;
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.user {
+  display: inline;
+  margin-right: 20px;
+  font-size: 200%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+//
+//
+// body {
+//   font-family: 'Zilla Slab', serif;
+// }
+//
+// h1 {
+//   font-family: 'Dancing Script', cursive;
+// }
+//
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'Zilla Slab', serif;
+//   font-weight: 700;
+// }
+//
+// header.masthead {
+//   position: relative;
+//   background-color: #343a40;
+//   background: url("../img/bg-masthead.jpg") no-repeat center center;
+//   background-size: cover;
+//   padding-top: 8rem;
+//   padding-bottom: 8rem;
+// }
+//
+// header.masthead .overlay {
+//   position: absolute;
+//   background-color: #212529;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   opacity: 0.3;
+// }
+//
+// header.masthead h1 {
+//   font-size: 2rem;
+// }
 
 // @media (min-width: 768px) {
 //   header.masthead {
@@ -117,8 +146,3 @@ header.masthead h1 {
 //   left: 0;
 //   opacity: 0.3;
 // }
-
-footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
