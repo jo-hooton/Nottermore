@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_153813) do
+ActiveRecord::Schema.define(version: 2018_10_03_142610) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_153813) do
     t.integer "patronu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index ["house_id"], name: "index_students_on_house_id"
     t.index ["patronu_id"], name: "index_students_on_patronu_id"
     t.index ["wand_id"], name: "index_students_on_wand_id"

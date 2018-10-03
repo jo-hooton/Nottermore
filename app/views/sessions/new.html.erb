@@ -1,0 +1,16 @@
+<h1>Log in</h1>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <p> <%= e %> </p>
+  <% end %>
+<% end %>
+<% #need to put error message in %>
+
+<%= form_tag sessions_path do %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= submit_tag 'Enter the Chamber of Secrets' %>
+<% end %>
