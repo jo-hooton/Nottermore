@@ -1,0 +1,17 @@
+<h1><%= @student.first_name%> <%= @student.last_name %></h1>
+
+<% if @student.house_id != nil %>
+  <h2>House: <%= link_to @student.house.name, house_path(@student.house) %></h2>
+<% else  %>
+  <h2> Get yourself sorted ya filthy witch/(wizard)!</h2>
+<% end %>
+
+
+<% #in case house doesn't exist - may have to link to 'GEt sorted' - i.e. new House form %>
+  <!-- <h2>House <%= link_to @student.house, house_path(@student.house) %></h2>  -->
+
+<% # need to do similar for Wand and Patronu  - potentially with if conditions, in case they don't exist yet %>
+
+<%= @student.patronu.name%>
+
+<% # Enrol in classes - link_to new lessons form  %>
