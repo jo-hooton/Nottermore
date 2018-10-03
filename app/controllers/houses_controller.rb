@@ -8,4 +8,7 @@ class HousesController < ApplicationController
     @house = House.find(params[:id])
   end
 
+
+
+
 end
