@@ -6,6 +6,7 @@ class Student < ApplicationRecord
   has_many :lessons
   has_many :professors, through: :lessons
 
+  has_secure_password
 
   # validates :email, presence: true, uniqueness: true
 

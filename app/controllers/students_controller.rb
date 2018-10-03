@@ -2,9 +2,8 @@ class StudentsController < ApplicationController
 
   before_action :set_student, only: [:show, :get_sorted, :sorted, :get_patronu, :post_patronu]
 
-
     def show
-
+      # raise
     end
 
     def new
@@ -14,8 +13,13 @@ class StudentsController < ApplicationController
     def create
       # put validations in later
       @student = Student.new(student_params)
-      @student.save
-      redirect_to @student
+      if @student.valid?
+        @student.save
+        session[:student_id] = @student.id
+        redirect_to @student
+      else
+        redirect_to signup_path
+      end
     end
 
     def get_sorted
@@ -51,7 +55,7 @@ class StudentsController < ApplicationController
     end
 
     def student_params
-      params.require(:student).permit(:first_name, :last_name, :email, :house_id, :wand_id, :patronu_id)
+      params.require(:student).permit(:first_name, :last_name, :email, :house_id, :wand_id, :patronu_id, :password)
     end
 
     #  DO these PARAMS need to be IDs???????????????????        house - wand - patronu
