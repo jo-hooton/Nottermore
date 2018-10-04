@@ -2,8 +2,6 @@
 <h1><%= @student.first_name%> <%= @student.last_name %></h1>
 <h3><%= @student.email %> </h3> <br>
 
-
-
 <% if @student.house_id != nil %>
   <h2>House: <%= link_to @student.house.name, house_path(@student.house) %></h2>
 <% else  %>
@@ -22,4 +20,12 @@
 
 <% if flash[:authorized]  %>
   <%= flash[:authorized] %>
+<% end %>
+
+<% if @student.lessons != nil %>
+<ul>
+  <% @student.lessons.each do |lesson| %>
+  <li> <%= lesson.professor.subject_name %> </li>
+  <% end %>
+</ul>
 <% end %>
