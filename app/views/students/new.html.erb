@@ -1,21 +1,21 @@
 <h1>Enrol as a new student</h1>
 
 <% if flash[:errors] %>
-  <%=  flash[:errors]%>
+  <%=  flash[:errors] %>
 <% end %>
 
 <%= form_for @student do |f|  %>
   <%= f.label :first_name %>
-  <%= f.text_field :first_name  %>
+  <%= f.text_field :first_name ,class: 'form-inputs'  %>
   <br>
   <%= f.label :last_name %>
-  <%= f.text_field :last_name  %>
+  <%= f.text_field :last_name, class: 'form-inputs'  %>
   <br>
   <%= f.label :email %>
-  <%= f.text_field :email  %>
+  <%= f.text_field :email, class: 'form-inputs'  %>
   <br>
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, class: 'form-inputs' %>
   <br>
   <%= f.submit 'Begin Your Nottermore Journey', class: "submit_button" %>
 <% end %>
