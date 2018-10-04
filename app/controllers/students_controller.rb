@@ -34,7 +34,7 @@ class StudentsController < ApplicationController
       random = housearr.sample
       house = House.find_by(name: random)
       @student.update(house: house)
-      
+
       redirect_to @student
     end
 

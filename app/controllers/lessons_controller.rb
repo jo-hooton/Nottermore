@@ -19,7 +19,7 @@ class LessonsController < ApplicationController
         # only if each lesson is valid, is it saved into DB
       else
         redirect_to new_lesson_path
-      en
+      end
     end
     redirect_to @student
   end
