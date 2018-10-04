@@ -16,10 +16,6 @@
       <div>
         <h1>Nottermore</h1>
         <h3> Like Pottermore, but not. </h3>
-      </div>
-    </div>
-
-    <div>
         <% if logged_in? %>
           <p> You are logged in as <%= link_to current_user.first_name, current_user %> </p>
           <p> <%= link_to "Log out", logout_path, method: "post" %> </p>
@@ -30,6 +26,11 @@
           <p> or </p>
           <p> <%= link_to "Sign up?", signup_path %> </p>
         <% end %>
+      </div>
+    </div>
+
+    <div>
+
       </div>
 
     <div class='main-content'>

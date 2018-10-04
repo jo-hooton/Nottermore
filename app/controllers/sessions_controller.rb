@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:student_id] = student.id
       redirect_to student
     else
-      flash[:errors] = "Please try re-entering your Email or Password again"
+      flash[:errors] = "Please try re-entering your Email and Password"
 
       # flash[:errors] = ["Invalid username or password"]
       render :new
