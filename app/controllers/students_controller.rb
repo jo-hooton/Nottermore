@@ -44,9 +44,11 @@ class StudentsController < ApplicationController
     end
 
     def post_patronu   # Move much of this logic to the Student model
-      patronuarr = ["Stag", "Jack Russell Terrier", "Otter", "Horse", "Hungarian Horntail", "Rabbit", "Hare",
-      "Phoenix", "Blue Eyes White Dragon", "Chinese Fireball", "Pug", "Termite", "King Cobra", "R2D2",
-      "Golem", "Marju", "Blobfish"]
+      patronuarr = [
+        "Stag", "Jack Russell Terrier", "Otter", "Horse", "Hungarian Horntail", "Rabbit", "Hare",
+        "Phoenix", "Blue Eyes White Dragon", "Chinese Fireball", "Pug", "Termite", "King Cobra", "R2D2",
+        "Golem", "Marju", "Blobfish"
+      ]
       random = patronuarr.sample
       patronu = Patronu.find_by(name: random)
       @student.update(patronu: patronu)
