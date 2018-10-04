@@ -15,7 +15,14 @@
 <% else  %>
 <h2> <%= link_to 'Discover Patronus', getpatronu_path %></h2>
 <% end %>
-
 <% if flash[:authorized]  %>
   <%= flash[:authorized] %>
+<% end %>
+
+<% if @student.lessons != nil %>
+<ul>
+  <% @student.lessons.each do |lesson| %>
+  <li> <%= lesson.professor.subject_name %> </li>
+  <% end %>
+</ul>
 <% end %>
