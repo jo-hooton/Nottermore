@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :get_sorted, :sorted, :get_patronu, :post_patronu]
 
     def show
-      # raise
+
     end
 
     def new
@@ -24,24 +24,28 @@ class StudentsController < ApplicationController
     end
 
     def get_sorted
+      # @student = current_user ?
       @houses = House.all
     end
 
     def sorted   # Move much of this logic to the Student model
+      # @student = current_user
       housearr = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
       random = housearr.sample
       house = House.find_by(name: random)
       @student.update(house: house)
+      
       redirect_to @student
     end
+
 
     def get_patronu
       @patronus = Patronu.all
     end
 
     def post_patronu   # Move much of this logic to the Student model
-      patronuarr = ["Stag", "Jack Russell Terrier", "Otter", "House", "Hungarian Horntail", "Rabbit", "Hare",
-        "Phoenix", "Blue Eyes White Dragon", "Chinese Fireball", "Leech", "Termite", "King Cobra", "R2D2",
+      patronuarr = ["Stag", "Jack Russell Terrier", "Otter", "Horse", "Hungarian Horntail", "Rabbit", "Hare",
+        "Phoenix", "Blue Eyes White Dragon", "Chinese Fireball", "Pug", "Termite", "King Cobra", "R2D2",
         "Golem", "Marju", "Blobfish"]
       random = patronuarr.sample
       patronu = Patronu.find_by(name: random)
@@ -56,7 +60,7 @@ class StudentsController < ApplicationController
     end
 
     def student_params
-      params.require(:student).permit(:first_name, :last_name, :email, :house_id, :wand_id, :patronu_id, :password)
+      params.require(:student).permit(:first_name, :last_name, :email, :house, :wand_id, :patronu_id, :password)
     end
 
     #  DO these PARAMS need to be IDs???????????????????        house - wand - patronu
