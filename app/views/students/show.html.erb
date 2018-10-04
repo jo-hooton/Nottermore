@@ -8,18 +8,10 @@
   <h2> <%= link_to 'Sorting Ceremony', getsort_path, class: 'submit_button' %></h2>
 <% end %>
 
-<% if @student.patronu_id != nil %>
-  <h2>Patronus: <%= @student.patronu.name%> </h2>
-  <div class="patronus" style='background-image: url(<%= asset_path("patronu/#{@student.patronu.name.downcase}.jpg") %>)'>
-
-
-  </div>
-<% else  %>
-<h2> <%= link_to 'Discover Patronus', getpatronu_path, class: 'submit_button' %></h2>
-<% end %>
-
 <% if flash[:authorized]  %>
-  <%= flash[:authorized] %>
+  <div class="errors_hp">
+    <%= flash[:authorized] %>
+  </div>
 <% end %>
 
 <% if @student.lessons.any?%>

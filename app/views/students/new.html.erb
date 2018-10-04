@@ -1,8 +1,6 @@
 <h1>Enrol as a new student</h1>
 
-<% if flash[:errors] %>
-  <%=  flash[:errors] %>
-<% end %>
+<%= render "errors/errors" %>
 
 <%= form_for @student do |f|  %>
   <%= f.label :first_name %>
