@@ -1,12 +1,72 @@
 <%= authorized_for(@student.id) %>
+<div class="main-content white-text" style="background-image: url(https://images.ctfassets.net/bxd3o8b291gf/3hollgS5QIcaUmoAWMsMEC/0ab7c45e0842488acdce82a76f6a7123/Hogwarts_PM_B4C37M1_GreatHallMourningCedricsDeath_Moment.jpg?w=2000)">
+<br>
+<br>
 <h1><%= @student.first_name%> <%= @student.last_name %></h1>
-<h3><%= @student.email %> </h3> <br>
+<br>
+<br>
+<h3><%= @student.email %> </h3>
+<br>
+<br>
+</div>
+<section class="features-icons bg-light text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-screen-desktop m-auto text-primary"></i>
+          </div>
+          <% if @student.lessons.any?%>
+              <h2>Classes</h2>
+              <div class="patronus" style='background-image: url(<%= asset_path("house/class-bg.jpg") %>)'>
+                <h4 class="white-text">
+                  <br><br>
+                  <% @student.lessons.each do |lesson| %>
+                  <%= link_to lesson.professor.subject_name, lesson.professor.subject, :style=> 'color:#FFFFFF;' %> <br>
+                  <% end %>
+                </h4>
+              </div>
+          <% else %>
+              <h2> <%= link_to 'Enrol in some classes', new_lesson_path, class: 'submit_button' %> </h2>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-layers m-auto text-primary"></i>
+          </div>
+          <% if @student.house_id != nil %>
+            <h2>House: <%= link_to @student.house.name, house_path(@student.house) %></h2>
+            <div class="patronus" style='background-image: url(<%= asset_path("house/#{@student.house.name.downcase}.jpg") %>)'>
 
-<% if @student.house_id != nil %>
-  <h2>House: <%= link_to @student.house.name, house_path(@student.house) %></h2>
-<% else  %>
-  <h2> <%= link_to 'Sorting Ceremony', getsort_path, class: 'submit_button' %></h2>
-<% end %>
+            </div>
+          <% else  %>
+            <h2> <%= link_to 'Sorting Ceremony', getsort_path, class: 'submit_button' %></h2>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-check m-auto text-primary"></i>
+          </div>
+          <% if @student.patronu_id != nil %>
+            <h2>Patronus: <%= @student.patronu.name%> </h2>
+            <div class="patronus" style='background-image: url(<%= asset_path("patronu/#{@student.patronu.name.downcase}.jpg") %>)'>
+
+            </div>
+          <% else  %>
+          <h2> <%= link_to 'Discover Patronus', getpatronu_path, class: 'submit_button' %></h2>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="main-content">
+
 
 <% if flash[:authorized]  %>
   <div class="errors_hp">
@@ -14,20 +74,5 @@
   </div>
 <% end %>
 
-<% if @student.lessons.any?%>
-    <h3> Classes you are currently enrolled in:</h3><br>
-      <ul>
-        <% @student.lessons.each do |lesson| %>
-        <li> <%= lesson.professor.subject_name %> </li>
-        <% end %>
-      </ul>
-<% else %>
-    <h2> <%= link_to 'Enrol in some classes', new_lesson_path %> </h2>
-<% end %>
 
-
-<% if @student.patronu_id != nil %>
-  <h2>Patronus: <%= @student.patronu.name%> </h2>
-<% else  %>
-<h2> <%= link_to 'Discover Patronus', getpatronu_path, class: 'submit_button' %></h2>
-<% end %>
+</div>

@@ -1,9 +1,14 @@
+<div class='main-content'>
 <h1><%= @subject.name %></h1>
 
 <h2>Taught by <%= link_to @subject.professor_name, professor_path(@subject.professor) %></h2>
 
-<p>
+<p class="text">
   <%= @subject.description %>
 </p>
 
 <h2><%= link_to 'All subjects', subjects_path %></h2>
+<br>
+<h4><%= link_to 'My Profile', current_user %></h4>
+
+</div>

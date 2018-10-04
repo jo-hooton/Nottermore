@@ -12,25 +12,31 @@
 
   <body>
 
-    <!-- <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <h1><a class="navbar-brand" href="/">Nottermore</a></h1>
-        <a class="submit_button" href="#">Sign In</a>
-      </div>
-    </nav> -->
 
     <div class='header'>
-      <div class="logo">
+      <div class="logo white-text">
         <h1>Nottermore</h1>
         <p> Like Pottermore, but not. </p>
       </div>
-      <div class="login-bits">
-        <% if logged_in? %>
-          <p> You are logged in as <%= link_to current_user.first_name, current_user %> </p>
-          <p> <%= link_to "Log out", logout_path, method: "post" %> </p>
-
+      <% if logged_in? %>
+      <div class="white-text">
+        <h4><%= link_to 'Profile', current_user, :style=> 'color:#FFFFFF;' %></h4>
+      </div>
+      <div class="white-text">
+        <h4><%= link_to 'Houses', houses_path, :style=> 'color:#FFFFFF;' %></h4>
+      </div>
+      <div class="white-text">
+        <h4><%= link_to 'Professors', professors_path, :style=> 'color:#FFFFFF;' %></h4>
+      </div>
+      <div class="white-text">
+        <h4><%= link_to 'Subjects', subjects_path, :style=> 'color:#FFFFFF;' %></h4>
+      </div>
+      <div class="login-bits white-text">
+          <p> You are logged in as <%= link_to current_user.first_name, current_user, :style=> 'color:#FFFFFF;' %> </p>
+          <p> <%= link_to "Log out", logout_path, method: "post", :style=> 'color:#FFFFFF;' %> </p>
+      </div>
         <% else %>
-
+      <div class="login-bits white-text">
           <p> You are not logged in. </p>
           <p> <%= link_to "Log in?", login_path %> </p>
           <p> or </p>
@@ -41,7 +47,7 @@
 
 
       <%= yield %>
-  
+
 
     <div class="footer">
       <h3> Bobby and Jo (and a bunch of other peoples assets what we got from the internet) &copy;</h3>
