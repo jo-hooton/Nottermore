@@ -1,7 +1,12 @@
-<h1>The 4 Houses of Hogwarts School of Witchcraft and Wizardry</h1>
+<div class='main-content'>
+<h1>Houses of Hogwarts School of Witchcraft and Wizardry</h1>
 
-<ul>
   <% @houses.each do |house| %>
-    <li> <%= link_to house.name, house_path(house) %> </li> <br>
+    <div class="patronus" style='background-image: url(<%= asset_path("house/#{house.name.downcase}.jpg") %>)'>
+      <br>
+     <h3><%= link_to house.name, house_path(house) %></h3><br>
+     <%= link_to image_tag("house/#{house.name.downcase}.jpg"), house_path(house) %>
+    </div>
   <% end %>
-</ul>
+
+</div>

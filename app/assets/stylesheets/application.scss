@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
 
 body {
   margin: 0px;
@@ -23,21 +24,33 @@ body {
   font-family: 'Zilla Slab', serif;
 }
 
-  h2 {
-    font-family: 'Dancing Script', cursive;
-  }
-
-  h1,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Zilla Slab', serif;
-    font-weight: 700;
-  }
+  // h2 {
+  //   font-family: 'Dancing Script', cursive;
+  // }
+  //
+  // h1,
+  // h3,
+  // h4,
+  // h5,
+  // h6 {
+  //   font-family: 'Zilla Slab', serif;
+  //   font-weight: 700;
+  // }
 
 .patronus {
   height: 200px;
   width: 200px;
   background-size: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.white-text {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
 }

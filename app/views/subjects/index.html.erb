@@ -1,7 +1,9 @@
+<div class='main-content'>
 <h1>Subjects taught at Hogwarts School of Witchcraft and Wizardry</h1>
-
+<br>
 <ul>
   <% @subjects.each do |subject| %>
     <li> <%= link_to subject.name, subject_path(subject) %> </li> <br>
   <% end %>
 </ul>
+</div>

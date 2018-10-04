@@ -1,7 +1,14 @@
+<div class='main-content'>
 <h1><%= @house.name %></h1>
-
-<p>
+<br>
+<div class="patronus" style='background-image: url(<%= asset_path("house/#{@house.name.downcase}.jpg") %>)'>
+</div>
+<br>
+<p class="text">
   <%= @house.description %>
 </p>
 
-<h2><%= link_to 'Go back to Hogwarts Houses', houses_path %></h2>
+<h2><%= link_to 'All Hogwarts Houses', houses_path %></h2>
+<br><br><br><br><br>
+<h5><%= link_to 'back to my profile', current_user %></h5>
+</div>
