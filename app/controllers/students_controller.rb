@@ -40,7 +40,7 @@ class StudentsController < ApplicationController
     end
 
     def post_patronu   # Move much of this logic to the Student model
-      patronuarr = ["Stag", "Jack Russell Terrier", "Otter", "House", "Hungarian Horntail", "Rabbit", "Hare",
+      patronuarr = ["Stag", "Jack Russell Terrier", "Otter", "Hungarian Horntail", "Rabbit", "Hare",
         "Phoenix", "Blue Eyes White Dragon", "Chinese Fireball", "Leech", "Termite", "King Cobra", "R2D2",
         "Golem", "Marju", "Blobfish"]
       random = patronuarr.sample

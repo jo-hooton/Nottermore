@@ -12,6 +12,10 @@
 
 <% if @student.patronu_id != nil %>
   <h2>Patronus: <%= @student.patronu.name%> </h2>
+  <div class="patronus" style='background-image: url(<%= asset_path("patronu/#{@student.patronu.name.downcase}.jpg") %>)'>
+    
+
+  </div>
 <% else  %>
 <h2> <%= link_to 'Discover Patronus', getpatronu_path %></h2>
 <% end %>
