@@ -11,7 +11,9 @@ class Student < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, on: :create
+  validates :password, presence: true, on: :create     #, on: create is very important here!
+  #  need the , on :create - otherwise any edits to the student cannot happen without password being present -
+
 
 
 
