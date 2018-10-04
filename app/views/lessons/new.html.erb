@@ -2,5 +2,5 @@
 
 <%= form_for @lesson do |f| %>
 <%= f.collection_check_boxes :professor_id, Professor.all, :id, :subject_name, { include_hidden: false } %>
-<%= f.submit %>
+<%= f.submit 'Enrol' %>
 <% end %>
