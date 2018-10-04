@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
         session[:student_id] = @student.id
         redirect_to @student
       else
+        flash[:errors] = "Please enter details in all fields"
         redirect_to signup_path
       end
     end

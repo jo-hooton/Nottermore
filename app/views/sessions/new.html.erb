@@ -1,11 +1,10 @@
 <h1>Log in</h1>
 
+
 <% if flash[:errors] %>
-  <% flash[:errors].each do |e| %>
-    <p> <%= e %> </p>
-  <% end %>
+  <%=  flash[:errors]%>
 <% end %>
-<% #need to put error message in %>
+<% #The above works fine - because with this login - it assumes only error is password or username  %>
 
 <%= form_tag sessions_path do %>
   <%= label_tag :email %>
