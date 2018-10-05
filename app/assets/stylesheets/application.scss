@@ -57,21 +57,25 @@ body {
 }
 
 @keyframes bolt {
-0%   {fill: red;}
-25%  {fill: yellow;}
-50%  {fill: blue;}
-100% {fill: green;}
+0%   {fill: #fdb82d;}
+50%  {fill: #005d4b;}
+100%   {fill: #fdb82d;}
 }
 
 @keyframes bolt2 {
-0%   {fill: red;}
-25%  {fill: yellow;}
-50%  {fill: blue;}
-100% {fill: green;}
+0% {fill: #20306b;}
+50% {fill: #d74f3f;}
+100% {fill: #20306b;}
 }
 
 .inline {
   display: inline;
+}
+
+#hogwarts-font {
+    text-align: center;
+    font-size: 40%;
+    font-family: ‘Dancing Script’, cursive;
 }
 
 .features-icons-item {

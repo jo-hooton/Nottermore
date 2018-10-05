@@ -1,6 +1,7 @@
 <div class='main-content'>
 <h1><%= @professor.name %></h1>
-
+<div class="patronus" style='background-image: url(<%= asset_path("professor/#{@professor.name.parameterize.underscore}.jpg") %>)'>
+</div>
 <h2>Professor of <%= link_to @professor.subject_name, subject_path(@professor.subject) %></h2>
 
 <h4>Professor Bio</h4>
@@ -12,3 +13,4 @@
 <br><br><br><br><br>
 <h5><%= link_to 'back to my profile', current_user %></h5>
 </div>
+<br><br><br><br>
