@@ -1,18 +1,18 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 @import "bootstrap";
 
 body {
@@ -24,28 +24,62 @@ body {
   font-family: 'Zilla Slab', serif;
 }
 
-  // h2 {
-  //   font-family: 'Dancing Script', cursive;
-  // }
-  //
-  // h1,
-  // h3,
-  // h4,
-  // h5,
-  // h6 {
-  //   font-family: 'Zilla Slab', serif;
-  //   font-weight: 700;
-  // }
+// h2 {
+//   font-family: 'Dancing Script', cursive;
+// }
+//
+// h1,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'Zilla Slab', serif;
+//   font-weight: 700;
+// }
 
 .patronus {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   background-size: cover;
   border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
+.lightning_bolt {
+  animation: bolt 4s ease-out infinite;
+}
+
+.lightning_bolt2 {
+  animation: bolt2 4s ease-out infinite;
+}
+
+@keyframes bolt {
+0%   {fill: red;}
+25%  {fill: yellow;}
+50%  {fill: blue;}
+100% {fill: green;}
+}
+
+@keyframes bolt2 {
+0%   {fill: red;}
+25%  {fill: yellow;}
+50%  {fill: blue;}
+100% {fill: green;}
+}
+
+.inline {
+  display: inline;
+}
+
+.features-icons-item {
+  & h2 {
+    height: 70px;
+  }
+}
+
 
 .white-text {
   color: #fff;

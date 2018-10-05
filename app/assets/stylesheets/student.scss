@@ -38,6 +38,21 @@
   align-items: center;
 }
 
+.main-content-row {
+	// background-image: url(https://images.pottermore.com/bxd3o8b291gf/2phT56DSucuUqU6Icm6mCe/b1fd2811691e41ffd1622a07eb528604/HogwartsCastle_WB_F4_HogwartsThroughTheTrees_Illust_100615_Land.jpg?w=1200);
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#hogwarts-font {
+	text-align: center;
+	font-size: 40%;
+	font-family: 'Dancing Script';
+}
+
 .user {
   display: inline;
   margin-right: 20px;
@@ -48,6 +63,14 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.checkboxes
+{
+   position: relative;
+   display: inline-block;
+   float: left;
+   margin-right: .5em;
 }
 
 // form {

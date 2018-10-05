@@ -20,12 +20,12 @@
           <% if @student.lessons.any?%>
               <h2>Classes</h2>
               <div class="patronus" style='background-image: url(<%= asset_path("house/class-bg.jpg") %>)'>
-                <h4 class="white-text">
-                  <br><br>
                   <% @student.lessons.each do |lesson| %>
-                  <%= link_to lesson.professor.subject_name, lesson.professor.subject, :style=> 'color:#FFFFFF;' %> <br>
+                  <h4 class="white-text">
+                  <%= link_to lesson.professor.subject_name, lesson.professor.subject, :style=> 'color:#FFFFFF;' %>
+                  </h4>
                   <% end %>
-                </h4>
+
               </div>
           <% else %>
               <h2> <%= link_to 'Enrol in some classes', new_lesson_path, class: 'submit_button' %> </h2>
@@ -54,7 +54,7 @@
           </div>
           <% if @student.patronu_id != nil %>
             <h2>Patronus: <%= @student.patronu.name%> </h2>
-            <div class="patronus" style='background-image: url(<%= asset_path("patronu/#{@student.patronu.name.downcase}.jpg") %>)'>
+            <div class="patronus" style='background-image: url(<%= asset_path("patronu/#{@student.patronu.name.parameterize.underscore}.jpg") %>)'>
 
             </div>
           <% else  %>
