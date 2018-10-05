@@ -1,7 +1,35 @@
 <div class='main-content'>
-<h1>Choose your Subjects</h2>
-<%= form_for @lesson do |f| %>
-<%= f.collection_check_boxes :professor_id, Professor.all, :id, :subject_name, { include_hidden: false } %><br>
-<%= f.submit 'Enrol', class: 'submit_button' %>
-<% end %>
-</div>
+
+  <h1>Choose your Subjects</h2>
+
+
+    <%= form_for @lesson do |f| %>
+    <div class="checkboxes">
+      <%= f.collection_check_boxes :professor_id, Professor.all[0..4], :id, :subject_name, { include_hidden: false } do |cb|%>
+      <div class="check_label">
+        <%= cb.check_box %>
+        <%= cb.label %>
+      </div>
+      <% end %>
+    </div>
+    <div class="checkboxes">
+      <%= f.collection_check_boxes :professor_id, Professor.all[5..9], :id, :subject_name, { include_hidden: false } do |cb|%>
+      <div class="check_label">
+        <%= cb.check_box %>
+        <%= cb.label %>
+      </div>
+      <% end %>
+    </div>
+    <div class="checkboxes">
+      <%= f.collection_check_boxes :professor_id, Professor.all[10..-1], :id, :subject_name, { include_hidden: false } do |cb|%>
+      <div class="check_label">
+        <%= cb.check_box %>
+        <%= cb.label %>
+      </div>
+      <% end %>
+    </div>
+    <br>
+    <%= f.submit 'Enrol', class: 'submit_button' %>
+    <% end %>
+
+  </div>
