@@ -1,24 +1,3 @@
-# README
+Nottermore is a Ruby on Rails application based on no interactive fantasy fan site in particular. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enrol as a student and enter a world where you can be sorted into a House, discover your patronus and enrol in classes.
